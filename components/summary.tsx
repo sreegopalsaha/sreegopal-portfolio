@@ -8,7 +8,7 @@ function Summary() {
 
       <div className="flex flex-wrap items-center gap-2 text-base text-muted-foreground mb-3">
         MERN Stack • TypeScript • React.js • Node.js
-        <Badge className="ml-2 px-3 py-1.5 inline-flex items-center gap-1.5 bg-neutral-300 dark:bg-neutral-900">
+        <Badge className="ml-2 px-3 py-1.5 inline-flex items-center gap-1.5 bg-neutral-300 dark:bg-neutral-900 text-foreground">
           <span className="w-1.5 h-1.5 rounded-full animate-pulse bg-emerald-400"></span>
           open to work
         </Badge>
