@@ -1,6 +1,24 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+body:after,
+body:before {
+  position: fixed;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 20%;
+  color: #aeae9d
+}
+
+body:before {
+  filter: url(#grainy)
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
