@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { ThemeToggleButton2 } from "@/components/ui/skiper-ui/skiper4";
 import GrainyFilter from "@/components/grainy-filter";
+// import { AiModeProvider } from "@/contexts/ai-mode-context";
+// import { AiModeController } from "@/components/ai-mode-controller";
+import ThemeToggleButton from "@/components/theme-toggle-button";
 
 const spaceGrotesk = Space_Grotesk({
   weight: ["300", "400", "500", "700"],
@@ -28,8 +30,13 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="dark">
           <GrainyFilter />
-          <ThemeToggleButton2 className="h-12 w-12 fixed top-5 right-5" />
+          {/* <AiModeProvider> */}
+          <div className="fixed top-5 right-5 z-2 flex items-center gap-3">
+            {/* <AiModeController /> */}
+            <ThemeToggleButton />
+          </div>
           {children}
+          {/* </AiModeProvider> */}
         </ThemeProvider>
       </body>
     </html>
